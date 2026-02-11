@@ -6,7 +6,7 @@ import (
 )
 
 func (c *Client) ListLocations(pageURL *string) (RespShallowLocations, error) {
-	url := "https://pokeapi.co/api/v2/location-area"
+	url := baseURL + "/location-area"
 	if pageURL != nil {
 		url = *pageURL
 	}

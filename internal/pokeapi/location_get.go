@@ -7,7 +7,7 @@ import (
 )
 
 func (c *Client) GetLocation(name string) (Location, error) {
-	url := "https://pokeapi.co/api/v2/location-area/" + name
+	url := baseURL + "/location-area/" + name
 	if val, ok := c.cache.Get(url); ok {
 		var loc Location
 		if err := json.Unmarshal(val, &loc); err != nil {
